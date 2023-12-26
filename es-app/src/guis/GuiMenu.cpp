@@ -105,6 +105,10 @@ GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(win
 
 	}, "iconKodi");	
 #endif
+	
+#ifdef _ENABLEEMUELEC
+		addEntry(_("LZ RETRO G-STICK CONFIG").c_str(), true, [this] { openEmuELECSettings(); }, "iconEmuelec"); /* < emuelec */
+#endif
 
 	if (isFullUI &&
 		ApiSystem::getInstance()->isScriptingSupported(ApiSystem::RETROACHIVEMENTS) &&
