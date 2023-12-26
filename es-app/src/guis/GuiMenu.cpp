@@ -78,7 +78,7 @@
 #define fake_gettext_zfast			_("ZFAST")
 #define fake_gettext_flatten_glow	_("FLATTEN-GLOW")
 
-GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(window, _("MAIN MENU").c_str()), mVersion(window)
+GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(window, _("LZ RETRO BOX 2024 v4.7").c_str()), mVersion(window)
 {
 	// MAIN MENU
 	bool isFullUI = UIModeController::getInstance()->isUIModeFull();
