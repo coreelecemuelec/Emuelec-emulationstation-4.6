@@ -192,7 +192,7 @@ int* getVideoModeDimensions(std::string videomode, std::vector<std::string> resl
 
 #endif
 
-GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(window, _("MAIN MENU").c_str()), mVersion(window)
+GuiMenu::GuiMenu(Window *window, bool animate) : GuiComponent(window), mMenu(window, _("LZ RETRO GAME 2024 v4.8").c_str()), mVersion(window)
 {
 	// MAIN MENU
 	bool isFullUI = !UIModeController::getInstance()->isUIModeKid() && !UIModeController::getInstance()->isUIModeKiosk();
@@ -330,7 +330,7 @@ if (!isKidUI)
 /* < emuelec */
 void GuiMenu::openEmuELECSettings()
 {
-	auto s = new GuiSettings(mWindow, "EmuELEC Settings");
+	auto s = new GuiSettings(mWindow, "LZ-Retro-Box Settings");
 
 	Window* window = mWindow;
 	std::string a;
@@ -364,7 +364,7 @@ void GuiMenu::openEmuELECSettings()
 			std::string selectedVideoMode = emuelec_video_mode->getSelected();
 		if (emuelec_video_mode->getSelected() != "-- AUTO-DETECTED RESOLUTIONS --") { 
 			if (emuelec_video_mode->getSelected() != "Custom") {
-			std::string msg = _("You are about to set EmuELEC resolution to:") +"\n" + selectedVideoMode + "\n";
+			std::string msg = _("You are about to set LZ-Retro-Box Settings resolution to:") +"\n" + selectedVideoMode + "\n";
 			msg += _("Do you want to proceed ?");
 		
 			window->pushGui(new GuiMsgBox(window, msg,
